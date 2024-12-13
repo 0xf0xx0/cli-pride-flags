@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ExperiBass/cli-pride-flags.git"
+        "url": "git+https://github.com/0xf0xx0/cli-pride-flags.git"
     },
     "keywords": [
         "cli",
@@ -17,12 +17,12 @@
         "pride-flags",
         "terminal"
     ],
-    "author": "ExperiBass",
+    "author": "0xf0xx0",
     "license": "GPL-3.0-or-later",
     "bugs": {
-        "url": "https://github.com/ExperiBass/cli-pride-flags/issues"
+        "url": "https://github.com/0xf0xx0/cli-pride-flags/issues"
     },
-    "homepage": "https://github.com/ExperiBass/cli-pride-flags#readme",
+    "homepage": "https://github.com/0xf0xx0/cli-pride-flags#readme",
     "dependencies": {
         "chalk": "^4.1.2",
         "cli-columns": "^4.0.0",

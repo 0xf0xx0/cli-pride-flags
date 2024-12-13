@@ -42,7 +42,7 @@ Options:
 Example: `cli-pride-flags -l trans` would display the trans flag and hold the terminal.
 
 # Screenshots
-Theres a page previewing all the flags on [my site :3](https://experibassmusic.eth.limo/flags.html)
+Theres a page previewing all the flags on [my site :3](https://0xf0xx0.eth.limo/flags.html)
 
 Some screenshots are below!
 
