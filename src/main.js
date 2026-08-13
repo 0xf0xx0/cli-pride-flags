@@ -187,12 +187,13 @@ function createFlag(availableWidth, availableHeight, options) {
     let finishedFlag = ''
     let position = 0 /// position in flag
     let currLine = 0 /// position in term
+    let mode = options.gradient ? 'gradient' : null
 
     if (options.blend) {
         let [blendFlag, factor] = options.blend.split(',')
         blendFlag = blendFlag.toLowerCase()
 
-        if (!Object.keys(flags).includes(blendFlag)) {
+        if (!flags[blendFlag]) {
             throw new Error(`The flag "${blendFlag}" doesn't exist!`)
         }
 
@@ -209,10 +210,10 @@ function createFlag(availableWidth, availableHeight, options) {
         while (position < 1) {
             currLine++
             position = (currLine / availableWidth).toFixed(3)
-            let color = colors.getColor(position, options.gradient ? 'gradient' : null)
+            let color = colors.getColor(position, mode)
 
             if (blendColors) {
-                const color2 = blendColors.getColor(position, options.gradient ? 'gradient' : null)
+                const color2 = blendColors.getColor(position, mode)
                 color = interpolateColor(color, color2, blendFactor)
             }
             finishedFlag += chalk.hex(color)(CHAR)
@@ -227,10 +228,10 @@ function createFlag(availableWidth, availableHeight, options) {
     while (position < 1) {
         currLine++
         position = (currLine / availableHeight).toFixed(3)
-        let color = colors.getColor(position, options.gradient ? 'gradient' : null)
+        let color = colors.getColor(position, mode)
 
         if (blendColors) {
-            const color2 = blendColors.getColor(position, options.gradient ? 'gradient' : null)
+            const color2 = blendColors.getColor(position, mode)
             color = interpolateColor(color, color2, blendFactor)
         }
         finishedFlag +=
